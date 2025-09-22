@@ -1,13 +1,15 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "pdf"
 version = "0.1.0"
 description = "Markdown to PDF converter"
-authors = [{ name = "EzT" }]
-dependencies = ["pygments"]
+authors = [{ name = "ezt" }]
+requires-python = ">=3.8"
+dependencies = []
 
-[project.scripts]
-pdf = "pdf:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
